@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './Config/db.js';
 import userRouter from './Routers/user.router.js';
+import contactRouter from './Routers/contact.router.js';
 
 dotenv.config();
 connectDB();
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.use("/api/user", userRouter);
+app.use("/api/contact", contactRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
