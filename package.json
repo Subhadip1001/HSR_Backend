@@ -1,0 +1,26 @@
+{
+  "name": "hrs_backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subhadip1001/HSR_Backend.git"
+  },
+  "author": "Subhadip Mandal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Subhadip1001/HSR_Backend/issues"
+  },
+  "homepage": "https://github.com/Subhadip1001/HSR_Backend#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
