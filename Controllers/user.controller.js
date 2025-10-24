@@ -1,4 +1,4 @@
-import User from "../Models/user.model";
+import User from "../Models/user.model.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
@@ -55,7 +55,11 @@ export const loginUser = async (req, res) => {
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "7days",
     });
-    res.status(200).json({ token });
+    return res.status(200).json({
+        message: "Login successful",
+        user: { email: user.email, id: user._id },
+         token 
+        });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
     console.error(error);
