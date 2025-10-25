@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./server.js", // Your main server file
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)", // Match any request starting with /api/
+      "dest": "/server.js" // Forward it to your Express app
+    },
+    {
+      "src": "/",          // Optional: Match the root path
+      "dest": "/server.js" // Forward it to your Express app
+    }
+  ]
+}
